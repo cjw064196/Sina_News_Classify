@@ -16,7 +16,7 @@ def words_dict(all_words_list,deleteN,stopwords_set=set()):
     for t in range(deleteN,len(all_words_list),1):
         if n>1000:            #feature_words的维度为1000
             break
-        if not all_words_list[t].isdigit() and all_words_list[t] not in stopwords_set and 1<len(all_words_list[t]<5):
+        if not all_words_list[t].isdigit() and all_words_list[t] not in stopwords_set and 1<len(all_words_list[t])<5:
             feature_words.append(all_words_list[t])
         n+=1
     return feature_words
